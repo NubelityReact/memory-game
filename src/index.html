@@ -1,94 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Memory game</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <!-- Game setup start -->
-<div>
-  <section>
-    <h2>Select Theme</h2>
-    <button>Numbers</button>
-    <button>Icons</button>
-  </section>
+    <title>Frontend Mentor | Memory game</title>
+  </head>
+  <body>
+    <!-- Game setup start -->
+    <div id="setup">
+      <section>
+        <h2>Select Theme</h2>
+        <button>Numbers</button>
+        <button>Icons</button>
+      </section>
 
+      <section>
+        <h2>Number of Players</h2>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+      </section>
 
-<section>
+      <section>
+        <h2>Grid Size</h2>
+        <button>4x4</button>
+        <button>6x6</button>
+      </section>
 
-<h2>
-  Number of Players
-</h2>  
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-</section>
+      <button>Start Game</button>
+    </div>
+    <!-- Game setup end -->
 
-<section>
+    <!-- Game board start -->
+    <div id="menu">
+      <button>Restart</button>
+      <button>New Game</button>
+      <button>Resume Game</button>
+    </div>
 
-  <h2>
-    Grid Size
-  </h2>
-  <button>4x4</button>
-  <button>6x6</button>
-</section>
+    <main class="board">
+      <div class="grid"></div>
+      <div class="score">
+        <!-- Multiplayer scores start -->
+        <div id="multiplayer">
+          <article class="info">
+            <h3 class="info__title">Player 1</h3>
+            <!-- P1 score -->
+            <p class="info__content">Current Turn</p>
+          </article>
 
-  <button>
-    Start Game
-  </button>
-</div>
-  <!-- Game setup end -->
+          <article class="info">
+            <h3 class="info__title">Player 2</h3>
+            <!-- P2 score -->
+            <p class="info__content">Current Turn</p>
+          </article>
 
-  <!-- Game board start -->
-<div>
-  <button>Restart</button>
-  <button>New Game</button>
-</div>
+          <article class="info">
+            <h3 class="info__title">Player 3</h3>
+            <!-- P3 score -->
+            <p class="info__content">Current Turn</p>
+          </article>
 
-  <!-- Multiplayer scores start -->
+          <article class="info">
+            <h3 class="info__title">Player 4</h3>
+            <!-- P4 score -->
+            <p class="info__content">Current Turn</p>
+          </article>
 
-  Player 1
-  <!-- P1 score -->
-  Current Turn
+          <!-- Multiplayer scores start -->
+        </div>
 
-  Player 2
-  <!-- P2 score -->
-  Current Turn
+        <!-- Solo game time and moves counter start -->
+        <div id="single-player">
+          <article class="info">
+            <!-- Time elapsed -->
+            <h3 class="info__title">Time</h3>
+            <p class="info__content" id="time-elapsed"></p>
+          </article>
 
-  Player 3
-  <!-- P3 score -->
-  Current Turn
+          <article class="info">
+            <!-- Moves total -->
+            <h3 class="info__title">Moves</h3>
+            <p class="info__content" id="moves"></p>
+          </article>
 
-  Player 4
-  <!-- P4 score -->
-  Current Turn
+          <!-- Solo game time and moves counter end -->
+        </div>
+      </div>
+    </main>
 
-  <!-- Multiplayer scores start -->
+    <aside>
+      <article class="result">
+        <h3 class="result__title"></h3>
+        <p class="result__message">Game Over! Here are the results...</p>
 
-  <!-- Solo game time and moves counter start -->
-  
-<div>
-  <!-- Time elapsed -->
-  <p>Time</p>
-  <p id="time-elapsed"></p>
-</div>
+        <div class="result__players">
+          <div class="card-content card-content--active">
+            <p class="card-content__label"></p>
+            <p class="card-content__message"></p>
+          </div>
+        </div>
 
-<div>
-  <!-- Moves total -->
-  <p>Moves</p>
-  <p id="moves"></p>
-</div>
+        <div class="result__buttons">
+          <button>Restart</button>
+          <button>Setup New Game</button>
+        </div>
+      </article>
+    </aside>
 
-  <!-- Solo game time and moves counter end -->
-
-  <!-- Game board end -->
-
-
-</body>
+    <!-- Game board end -->
+  </body>
 </html>
