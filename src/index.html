@@ -11,29 +11,45 @@
 <body>
 
   <!-- Game setup start -->
+<div>
+  <section>
+    <h2>Select Theme</h2>
+    <button>Numbers</button>
+    <button>Icons</button>
+  </section>
 
-  Select Theme
-  Numbers
-  Icons
 
+<section>
+
+<h2>
   Number of Players
-  1
-  2
-  3
-  4
+</h2>  
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+</section>
 
-  Grid Size
-  4x4
-  6x6
+<section>
 
-  Start Game
+  <h2>
+    Grid Size
+  </h2>
+  <button>4x4</button>
+  <button>6x6</button>
+</section>
 
+  <button>
+    Start Game
+  </button>
+</div>
   <!-- Game setup end -->
 
   <!-- Game board start -->
-
-  Restart
-  New Game
+<div>
+  <button>Restart</button>
+  <button>New Game</button>
+</div>
 
   <!-- Multiplayer scores start -->
 
@@ -56,12 +72,18 @@
   <!-- Multiplayer scores start -->
 
   <!-- Solo game time and moves counter start -->
-
-  Time
+  
+<div>
   <!-- Time elapsed -->
+  <p>Time</p>
+  <p id="time-elapsed"></p>
+</div>
 
-  Moves
+<div>
   <!-- Moves total -->
+  <p>Moves</p>
+  <p id="moves"></p>
+</div>
 
   <!-- Solo game time and moves counter end -->
 
